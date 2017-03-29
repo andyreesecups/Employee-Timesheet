@@ -9,22 +9,53 @@ $(document).ready(function () {
 	    messagingSenderId: "922747148509"
 	  };
 	 firebase.initializeApp(config);
-
 	  // Create a variable to reference the database.
 	var database = firebase.database();
 
 	var name startDate monthRate;
 
 	// When ever employee hits submit button
-	$("#search-button").on("click", function(){
-		// get employee input values
-		name = $("#").val().trim();
-		startDate = $("#").val().trim();
-		monthRate =  parseInt($("#").val().trim());
+	
+	// initialize variables 
+	var name = ""; 
+	var startDate; 
+	var monthRate; 
+	var role;
+	var totalBilled;
+	var monthsWorked;
 
-		
+// When ever employee hits submit button
+	$("#search-button").on("click", function(event){
+	
+	// get employee input values
+	name = $("#name").val().trim();
+	role = $("#role").val().trim();
+	startDate = $("#start-date").val().trim();
+	monthRate =  parseInt($("#monthly-rate").val().trim());
 
-		var tRow = $("<tr>");
+	// console.log user values 
+	console.log(name + " " + startDate + " " + monthRate);
+
+	// adding user input to database
+	database.ref().push({
+		name: name,
+		role: role,
+		startDate: startDate,
+		monthRate: monthRate
+	});
+
+	database.ref().on("value", function(snapshot){
+		$("#name").html(snapshot.val().name);
+		$("#role").html(snapshot.val().role);
+		$("#start-date").html(snapshot.val().startDate);
+		$("#monthly-rate").html(snapshot.val().monthRate);
+	},
+	function(errorObject){
+		console.log("errors handled:" + errorObject.code);
+	});
+})
+
+var tRow = $("<tr>");
 		tRow.append("<td>"input"</td>");
 		tRow.append("<td>"input"</td>");
 		tRow.append("<td>"input"</td>");
@@ -34,7 +65,3 @@ $(document).ready(function () {
 		$("#employee-table").append(tRow);
 
 		console.log(tRow);
-		
-		
-	})
-})
