@@ -37,7 +37,8 @@ $("#search-button").on("click", function(event){
 		name: name,
 		role: role,
 		startDate: startDate,
-		monthRate: monthRate
+		monthRate: monthRate,
+		dateAdded: firebase.database.ServerValue.TIMESTAMP
 	});
 
 	database.ref().on("value", function(snapshot){
@@ -50,4 +51,8 @@ $("#search-button").on("click", function(event){
 		console.log("errors handled:" + errorObject.code);
 	});
 })
+database.ref().on("childAdded", function(childSnap){
 
+})
+
+database.ref().orderByChild("dateAdded")
