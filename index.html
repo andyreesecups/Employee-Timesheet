@@ -8,84 +8,68 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="text-center">Employee Management</h1>
-            <h3 class="text-center">A comprehensive Directory of Employee Billable Hours</h3>
+    <div class="jumbotron container">
+        <div class="row text-center">
+            <h1 class="col-xs-12">Employee Management</h1>
+            <h3 class="col-xs-12">A comprehensive Directory of Employee Billable Hours</h3>
         </div>
     </div>
-    <header>
-        <strong>Current Employee</strong>
-    </header>
-    <section id="table-section">
-		<article>
-	    	<div class="col-sm-2">
-	    		<p>Employee Name</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Role</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Start Date</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Months Worked</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Monthly Rate($)</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Total Billed($)</p>
-	    	</div>
-		</article>
-		<hr>
-		<article>
-		<div class="col-sm-2">
-	    		<p>Employee Name</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Role</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Start Date</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Months Worked</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Monthly Rate($)</p>
-	    	</div>
-	    	<div class="col-sm-2">
-	    		<p>Total Billed($)</p>
-	    	</div>
-			
-		</article>
+    
 
+    <section id="articles" class="container">
+		<header class="row">
+	        <h2 class="col-xs-12">Current Employee</h2>
+	    </header>
+
+		<table id="employee-table" class="table">
+		  <thead>
+		    <tr>
+		      <th scope="row">Employee Name</th>
+		      <th>Role</th>
+		      <th>Start Date</th>
+		      <th>Months Worked</th>
+		      <th>Monthly Rate ($)</th>
+		      <th>Total Billed ($)</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">Richard Smalls</th>
+		      <td>The Dude</td>
+		      <td>01/26/16</td>
+		      <td>50</td>
+		      <td>3000</td>
+		      <td>3000</td>
+		    </tr>
+		  </tbody>
+		</table>
     </section>
-    <aside>
-        <strong>Add Employee</strong>
-    </aside>
-    <div id="articles">
-    </div>
-    <section>
-        <form>
-            <div class="form-group">
+   <section class="container"> 
+    <header class="row">
+        <h2 class="col-xs-12">Add Employee</h2>
+    </header>
+    
+  
+        <form class="row ">
+            <div id="name-text" class="form-group col-xs-12">
                 <label for="employee-name">Employee Name </label>
                 <input type="text" class="form-control" id="name" placeholder="">
             </div>
-            <div class="form-group">
+            <div class="form-group col-xs-12">
                 <label for="employee-role">Role </label>
                 <input type="text" class="form-control" id="role" placeholder="">
             </div>
-            <div class="form-group">
+            <div class="form-group col-xs-12">
                 <label for="employee-date">Start Date (DD/MM/YY - ex: 01/01/89) </label>
                 <input type="text" class="form-control" id="start-date" placeholder="">
             </div>
-            <div class="form-group">
+            <div class="form-group col-xs-12">
                 <label for="employee-rate">Monthly Rate </label>
                 <input type="text" class="form-control" id="monthly-rate" placeholder="">
             </div>
+            <div class="col-xs-12">
             <button id="search-button" type="button" class="btn btn-md"><span></span>Submit</button>
+            </div>
         </form>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

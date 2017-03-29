@@ -1,46 +1,57 @@
 .jumbotron{
 	border-radius: 10px 10px 10px 10px;
-	margin-left: 150px;
-	margin-right: 150px;
+	/*margin-left: 150px;
+	margin-right: 150px;*/
 	background-color: #1C1A59;
 	color: white;
 	text-align: center;
 }
 
 header {
-	margin-left: 150px;
-	margin-right: 150px;
+	/*margin-left: 150px;
+	margin-right: 150px;*/
 	color: white;
 	background-color: #1C1A59;
-	margin-bottom: 0px;
-	padding: 15px;
-	border-radius: 10px 10px 0px 0px;
+/*	margin-bottom: 0px;
+*/	/*padding: 4px;*/
+	border-radius: 7px 7px 0px 0px;
 	font-size: 18px;
 }
 
 section {
-	margin-left: 150px;
+	/*margin-left: 150px;
+	margin-right: 150px;*/
+	/*padding: 29px;*/
+	margin-top: 30px;
+	border: 2px solid #1C1A59; 
+	border-radius: 10px 10px 10px 10px;
+}
+
+
+
+button:hover {
+	background-color: #575594;
+}
+#employee-table{
+	margin-top: 10px;
+}
+#name-text{
+	margin-top: 10px;
+}
+#search-button{
+	margin-bottom: 20px;
+}
+
+#table-section{
+	/*min-height: 100px;*/
+
+
+/*#articles {
+    margin-left: 150px;
 	margin-right: 150px;
 	padding: 29px;
 	margin-top: 0px;
 	border: 2px solid #1C1A59; 
 	border-radius: 0px 0px 10px 10px;
-}
 
-aside{
-	margin-top: 20px;
-	margin-left: 150px;
-	margin-right: 150px;
-	color:white;
-	background-color: #1C1A59;
-	padding: 15px;
-	border-radius: 10px 10px 0px 0px;
-	font-size: 18px;
-}
-
-button:hover {
-	background-color: #575594;
-}
-#table-section{
-	min-height: 100px;
-}
+}*/
