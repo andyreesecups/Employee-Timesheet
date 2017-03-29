@@ -41,3 +41,12 @@ aside{
 button:hover {
 	background-color: #575594;
 }
+
+#articles {
+    margin-left: 150px;
+	margin-right: 150px;
+	padding: 29px;
+	margin-top: 0px;
+	border: 2px solid #1C1A59; 
+	border-radius: 0px 0px 10px 10px;
+}
