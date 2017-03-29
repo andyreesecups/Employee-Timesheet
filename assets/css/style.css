@@ -41,3 +41,6 @@ aside{
 button:hover {
 	background-color: #575594;
 }
+#table-section{
+	min-height: 100px;
+}
