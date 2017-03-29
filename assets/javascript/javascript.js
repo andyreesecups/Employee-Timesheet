@@ -11,15 +11,43 @@
   // Create a variable to reference the database.
 var database = firebase.database();
 
-var name startDate monthRate;
+
+// initialize variables 
+var name = ""; 
+var startDate; 
+var monthRate; 
+var role;
+var totalBilled;
+var monthsWorked;
 
 // When ever employee hits submit button
-$("#submit").on("click", function(){
+$("#search-button").on("click", function(event){
+	
 	// get employee input values
-	name = $("#").val().trim();
-	startDate = $("#").val().trim();
-	monthRate =  parseInt($("#").val().trim());
+	name = $("#name").val().trim();
+	role = $("#role").val().trim();
+	startDate = $("#start-date").val().trim();
+	monthRate =  parseInt($("#monthly-rate").val().trim());
 
 	// console.log user values 
-	
+	console.log(name + " " + startDate + " " + monthRate);
+
+	// adding user input to database
+	database.ref().push({
+		name: name,
+		role: role,
+		startDate: startDate,
+		monthRate: monthRate
+	});
+
+	database.ref().on("value", function(snapshot){
+		$("#name").html(snapshot.val().name);
+		$("#role").html(snapshot.val().role);
+		$("#start-date").html(snapshot.val().startDate);
+		$("#monthly-rate").html(snapshot.val().monthRate);
+	},
+	function(errorObject){
+		console.log("errors handled:" + errorObject.code);
+	});
 })
+
