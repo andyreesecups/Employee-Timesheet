@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Employee Timesheet</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="text-center">Employee Management</h1>
+            <h3 class="text-center">A comprehensive Directory of Employee Billable Hours</h3>
+        </div>
+    </div>
+    <header>
+        <strong>Current Employee</strong>
+    </header>
+    <aside>
+        <strong>Add Employee</strong>
+    </aside>
+    <div id="articles">
+    </div>
+    <section>
+        <form>
+            <div class="form-group">
+                <label for="employee-name">Employee Name </label>
+                <input type="text" class="form-control" id="name" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="employee-role">Role </label>
+                <input type="text" class="form-control" id="role" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="employee-date">Start Date (DD/MM/YY - ex: 01/01/89) </label>
+                <input type="text" class="form-control" id="start-date" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="employee-rate">Monthly Rate </label>
+                <input type="text" class="form-control" id="monthly-rate" placeholder="">
+            </div>
+            <button id="search-button" type="button" class="btn btn-md"><span></span>Submit</button>
+        </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>
